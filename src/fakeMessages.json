@@ -1,0 +1,27 @@
+[
+  {
+    "id": "msg1",
+    "content": "Your creativity and passion really shine through in everything you do! Keep inspiring others 🌟",
+    "createdAt": "2024-02-15T10:30:00Z"
+  },
+  {
+    "id": "msg2", 
+    "content": "Thank you for always being so authentic and sharing your journey. You've helped me stay motivated! 💪",
+    "createdAt": "2024-02-14T15:45:00Z"
+  },
+  {
+    "id": "msg3",
+    "content": "Just wanted to let you know that your work has made a real difference. You're awesome! 🙌",
+    "createdAt": "2024-02-13T09:15:00Z"
+  },
+  {
+    "id": "msg4",
+    "content": "Your positive energy is contagious! Thanks for brightening up my feed ✨",
+    "createdAt": "2024-02-12T18:20:00Z"
+  },
+  {
+    "id": "msg5",
+    "content": "Really admire how you stay true to yourself while inspiring others. Keep being you! 💫",
+    "createdAt": "2024-02-11T14:10:00Z"
+  }
+]

@@ -1,8 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AnonyMsg
+
+AnonyMsg is a web application that allows users to send and receive anonymous messages. Built with Next.js, TypeScript, and MongoDB, it features user authentication, email verification, and a modern UI with dark mode support.
+
+## Features
+
+- 🔒 Secure user authentication with NextAuth.js
+- ✉️ Email verification system
+- 💭 Anonymous message sending and receiving
+- 🤖 AI-powered message suggestions using Google's Gemini API
+- 🌓 Dark/Light mode theme switching
+- 📱 Responsive design
+- 🎨 Modern UI with Tailwind CSS and shadcn/ui
+
+## Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Database**: MongoDB with Mongoose
+- **Authentication**: NextAuth.js
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Email Service**: Resend
+- **AI Integration**: Google Generative AI (Gemini)
+- **Form Handling**: React Hook Form + Zod
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
 npm run dev
