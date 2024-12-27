@@ -1,11 +1,10 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDebounceCallback } from 'usehooks-ts'
 import { signInSchema } from '@/schemas/signInSchema'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { ApiResponse } from '@/types/ApiResponse'
 import { useToast } from "@/hooks/use-toast"
 import { Button } from "@/components/ui/button"
 
@@ -25,7 +24,7 @@ import { Input } from "@/components/ui/input"
 import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
     const { toast } = useToast()
     const router = useRouter()
 
@@ -183,4 +182,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

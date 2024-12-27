@@ -16,7 +16,6 @@ import { useRouter } from 'next/navigation'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -26,7 +25,7 @@ import { Input } from "@/components/ui/input"
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
   const { toast } = useToast()
   const router = useRouter()
 
@@ -173,4 +172,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

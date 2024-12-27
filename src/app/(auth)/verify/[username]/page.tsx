@@ -25,7 +25,7 @@ import { useParams, useRouter } from "next/navigation"
 import { useState } from "react"
 
 
-const page = () => {
+const Page = () => {
 
     const { toast } = useToast()
     const router = useRouter()
@@ -119,4 +119,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

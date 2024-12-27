@@ -26,7 +26,7 @@ import { Separator } from '@/components/ui/separator'
 import MessageCard from '@/components/custom/MessageCard'
 
 
-const page = () => {
+const Page = () => {
 const [messages,setMessages]=useState<Array<Message>>([])
 const [isFetchingMessages,setIsFetchingMessages]=useState<boolean>()
 const [isAcceptingMessages,setIsAcceptingMessages]=useState<boolean>(false)
@@ -76,7 +76,7 @@ const fetchMessages=useCallback(async()=>{
   }finally{
     setIsFetchingMessages(false)
   }
-},[])
+},[toast])
 
 
 const fetchAcceptingStatus=useCallback(async()=>{
@@ -96,7 +96,7 @@ const fetchAcceptingStatus=useCallback(async()=>{
     })
   }
 
-},[])
+},[toast])
 
 
 
@@ -122,11 +122,10 @@ const onSubmit=async(value :boolean)=>{
 
 
 
-useEffect(()=>{
-  fetchAcceptingStatus()
-  fetchMessages()
-  
-},[])
+useEffect(() => {
+  fetchAcceptingStatus();
+  fetchMessages();
+}, [fetchAcceptingStatus, fetchMessages]);
 
 
 if(status==="loading"){
@@ -215,4 +214,4 @@ if(status==="loading"){
   );
 }
 
-export default page
+export default Page

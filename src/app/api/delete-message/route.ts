@@ -31,7 +31,7 @@ try {
      
      const userId=user?._id
     const foundUser=await userModel.findById(userId)
-    const ismessage = foundUser?.messages?.some(message => message?._id.toString() === queryParams?.messageId);
+    const ismessage = foundUser?.messages?.some(message => message._id && message?._id.toString() === queryParams?.messageId);
      if(!ismessage){
         return Response.json({
             success:false,

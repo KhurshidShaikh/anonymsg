@@ -70,12 +70,11 @@ callbacks:{
         const existingUser = await userModel.findOne({ email: user.email });
         
         if (!existingUser) {
-           
+          
             const newUser = new userModel({
                 email: user.email,
-                username: user?.email.split('@')[0] ,
+                username: user.email?.split('@')[0] || '',
                 isVerified: true,  
-
             });
             await newUser.save();
             user.username = newUser.username;
@@ -91,7 +90,7 @@ callbacks:{
            user.isVerified=existingUser.isVerified
            user._id=existingUser._id.toString()
         }
-        return user;
+        return true;
     },
     async jwt({ token, user }) {
        
@@ -101,7 +100,7 @@ callbacks:{
             token.isVerified=user.isVerified
             token.email = user.email;
             token.isAcceptingMessages=user.isAcceptingMessages
-            token.username = user.username || user.email.split('@')[0]
+            token.username = user.username 
         }
        
         return token

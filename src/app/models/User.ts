@@ -3,11 +3,16 @@ import mongoose,{mongo, Schema} from "mongoose";
 
 
 export interface Message{
+  _id?:mongoose.ObjectId  
  content:string,
  createdAt:Date
 }
 
 const MessageSchema:Schema<Message>= new Schema({
+    _id: {
+        type: Schema.Types.ObjectId,
+        auto: true
+      },
    content :{
     type:String,
     required:true

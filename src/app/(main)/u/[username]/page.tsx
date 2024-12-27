@@ -23,7 +23,7 @@ import dummy from "@/dummy.json"
 import Link from 'next/link'
 import { Loader2 } from 'lucide-react'
 
-const page = () => {
+const Page = () => {
      const {toast}=useToast()
      const {username}=useParams()
      const [isSending,setIsSending]=useState(false)
@@ -158,4 +158,4 @@ try {
   )
 }
 
-export default page
+export default Page
